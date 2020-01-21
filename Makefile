@@ -53,7 +53,8 @@ archive: po-pull
 	gzip -9 $(PKGNAME)-$(VERSION).tar
 	rm -rf $(PKGNAME)-$(VERSION)
 	git checkout -- po/python-$(PKGNAME).pot
-	@echo "The archive name is $(PKGNAME)-$(VERSION).tar.gz"
+	@echo "The archive name is:"
+	@echo "$(PKGNAME)-$(VERSION).tar.gz"
 
 local: po-pull
 	@rm -f ChangeLog
